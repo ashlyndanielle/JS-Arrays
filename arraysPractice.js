@@ -300,7 +300,6 @@ of Data is to have an Array full of objects. */
 //Create an empty array called users.
 var users = [];
   //Code Here
-users.push(user1, user2, user3);
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
 
@@ -329,6 +328,7 @@ var user3 = {
 
 
 //Your Code Here
+users.push(user1, user2, user3);
 
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
@@ -337,13 +337,20 @@ and those objects contain properties about the specific person you follow.*/
 /*Now let's say that Tyler decided to delete his account. Loop through your array of
 objects until you find Tyler's account (use tylermcginnis33@gmail.com to find him).
 Once you find the particular index he's located in, delete him from the array.*/
+
 for(var x = 0; x<users.length; x++){
   for (var key in users[x]){
-    if(user[x].email === 'tylermcginnis33@gmail.com'){
-      delete user[x].email
+    if(users[x].email === 'tylermcginnis33@gmail.com'){
+      users.splice(x, 1);
     }
   }
 }
+
+// for (var i = 0; i < users.length; i++) {
+//   if (users[i].email === “tylermcginnis33@gmail.com”) {
+//     users.splice(i, 1)
+//   }
+// }
   //Code Here
 
 //The activity we just did is very much how data works in 'the real world'.
